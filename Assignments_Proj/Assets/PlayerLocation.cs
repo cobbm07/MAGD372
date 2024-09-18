@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerLocation : MonoBehaviour
 {
+    // When the "OnPDown" event occurs, print the current player location to the debug console.
     private void OnEnable()
     {
         EventManager.OnPDown += PrintPlayerPosition;

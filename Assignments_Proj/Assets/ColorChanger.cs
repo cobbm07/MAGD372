@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
+    // When the OnLeftClick event occurs, do some funky math using the milliseconds elapsed from the last mouse click to update the color of the object.
     private void OnEnable()
     {
         EventManager.OnLeftClick += NewColor;
