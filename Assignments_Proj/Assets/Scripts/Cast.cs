@@ -19,6 +19,6 @@ public class Cast : MonoBehaviour
     }
 
     private void CastSpell() {
-        objectPooler.SpawnFromPool("Wand_Projectile", transform.position, Quaternion.identity);
+        objectPooler.SpawnFromPool("Wand_Projectile", transform.position, transform.rotation);
     }
 }
