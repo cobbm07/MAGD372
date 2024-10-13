@@ -16,23 +16,27 @@ public class Ball : MonoBehaviour
     // Coroutine Implementation
     public IEnumerator MoveWithSpeed(float speed) {
         var end = Time.time + 0.5f;
+        float yLoc = transform.position.y;
+        if (yLoc >= 9 || yLoc < -9)
+            direction *= -1;
         while (Time.time < end) {
             rb.velocity = new Vector3(0, speed * direction, 0);
             yield return null;
         }
         rb.velocity = Vector3.zero;
-        direction *= -1;
-        Debug.Log(gameObject.name + " is done moving!");
+        Debug.Log(gameObject.name + " is done moving (Coroutine)");
     }
 
-    public async void MoveWithSpeedAsync(float speed) {
+    public async Task<string> MoveWithSpeedAsync(float speed) {
         var end = Time.time + 0.5f;
+        float yLoc = transform.position.y;
+        if (yLoc >= 9 || yLoc < -9)
+            direction *= -1;
         while (Time.time < end) {
             rb.velocity = new Vector3(0, speed * direction, 0);
             await Task.Yield();
         }
         rb.velocity = Vector3.zero;
-        direction *= -1;
-        Debug.Log(gameObject.name + " is done moving!");
+        return gameObject.name;
     }
 }
