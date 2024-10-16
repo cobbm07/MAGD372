@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5df1cdc14158314f9f2f2b7cc463627, type: 3}
+  m_Name: Bigfoot
+  m_EditorClassIdentifier: 
+  name: Bigfoot
+  type: Humanoid
+  description: A hairy, human-like forest dweller
+  artwork: {fileID: 21300000, guid: 2ec6b250778d56d4b9739aad6faf8297, type: 3}
+  cardColorSprite: {fileID: 21300000, guid: b0f8c6b6b5cc340478984c87ebabc9a5, type: 3}
+  manaCost: 5
+  attack: 4
+  defense: 4
